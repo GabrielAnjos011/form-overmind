@@ -38,7 +38,7 @@
 }
 
 .submitBtn {
-  background-color: #1a1b30;
+  background-color: #2b2c4e;
   color: white;
   height: 50px;
   border: none;
@@ -49,5 +49,14 @@
 }
 
 .submitBtn:hover {
+  /* opacity: 0.8; */
+  background-color: #1a1b30;
+  transform: scale(1.05);
+}
+
+.submitBtn:disabled{
+  background-color: #2b2c4e;
+  cursor: not-allowed;
   opacity: 0.8;
+  transform: scale(1);
 }

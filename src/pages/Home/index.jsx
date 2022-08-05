@@ -21,7 +21,26 @@ function Home() {
       toast.error("Senha deve ter no mínimo 6 caracteres");
       return;
     }
-    console.log(formValues);
+    const request = await fetch(process.env.REACT_APP_HOST, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...formValues
+      })
+    })
+    
+    if (request.ok) {
+      toast.success("Cadastro realizado com sucesso");
+      setFormValues({
+        name: "",
+        email: "",
+        telephone: "",
+        password: "",
+        passwordConfirm: "",
+      });
+    }
   }
 
   return (
@@ -36,12 +55,14 @@ function Home() {
         <h2 className="form_title">Login</h2>
         <p className="section">Dados</p>
         <Input
+          title="Insira o nome completo"
           label="Nome completo"
           name="name"
           value={formValues.name}
           onChange={setFormValues}
         />
         <Input
+          title="Insira o email"
           type="email"
           label="Email"
           name="email"
@@ -49,6 +70,7 @@ function Home() {
           onChange={setFormValues}
         />
         <Input
+          title="Insira o telefone"
           type="tel"
           label="Telefone"
           name="telephone"
@@ -56,6 +78,7 @@ function Home() {
           onChange={setFormValues}
         />
         <Input
+          title="Insira a senha"
           type="password"
           label="Senha"
           name="password"
@@ -63,6 +86,7 @@ function Home() {
           onChange={setFormValues}
         />
         <Input
+          title="Confirme a senha"
           type="password"
           label="Confirme a senha"
           name="passwordConfirm"
@@ -70,7 +94,12 @@ function Home() {
           onChange={setFormValues}
         />
         <div className="containerSubmit">
-          <button type="submit" className="submitBtn">
+          <button 
+            title="Pressione para cadastrar"
+            type="submit" 
+            className="submitBtn"
+            disabled={formValues.name.length <= 0  || formValues.email.length <= 0 || formValues.telephone.length <= 0 || formValues.password.length <= 0 || formValues.passwordConfirm.length <= 0}
+          >
             Salvar
           </button>
         </div>
