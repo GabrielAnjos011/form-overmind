@@ -21,7 +21,7 @@ function Home() {
       toast.error("Senha deve ter no mínimo 6 caracteres");
       return;
     }
-    const request = await fetch(`${process.env.REACT_APP_HOST}/api/form`, {
+    const request = await fetch(process.env.REACT_APP_HOST, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
