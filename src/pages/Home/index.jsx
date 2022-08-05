@@ -55,9 +55,11 @@ function Home() {
         <h2 className="form_title">Login</h2>
         <p className="section">Dados</p>
         <Input
+          type="text"
           title="Insira o nome completo"
           label="Nome completo"
           name="name"
+          placeholder="Insira o nome completo"
           value={formValues.name}
           onChange={setFormValues}
         />
@@ -66,14 +68,17 @@ function Home() {
           type="email"
           label="Email"
           name="email"
+          placeholder="Insira o email"
           value={formValues.email}
           onChange={setFormValues}
         />
         <Input
-          title="Insira o telefone"
+          title="Número de telefone precisa ser no formato (99) 9999-9999"
           type="tel"
           label="Telefone"
           name="telephone"
+          placeholder="(99) 9999-9999"
+          pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
           value={formValues.telephone}
           onChange={setFormValues}
         />
@@ -82,6 +87,7 @@ function Home() {
           type="password"
           label="Senha"
           name="password"
+          placeholder="Insira a senha"
           value={formValues.password}
           onChange={setFormValues}
         />
@@ -90,6 +96,7 @@ function Home() {
           type="password"
           label="Confirme a senha"
           name="passwordConfirm"
+          placeholder="Confirme a senha"
           value={formValues.passwordConfirm}
           onChange={setFormValues}
         />
