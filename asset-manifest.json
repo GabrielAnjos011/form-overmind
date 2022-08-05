@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/form-overmind/static/css/main.2fe4f3e2.css",
-    "main.js": "/form-overmind/static/js/main.9514b491.js",
+    "main.css": "/form-overmind/static/css/main.31762512.css",
+    "main.js": "/form-overmind/static/js/main.17f45ba0.js",
     "index.html": "/form-overmind/index.html",
-    "main.2fe4f3e2.css.map": "/form-overmind/static/css/main.2fe4f3e2.css.map",
-    "main.9514b491.js.map": "/form-overmind/static/js/main.9514b491.js.map"
+    "main.31762512.css.map": "/form-overmind/static/css/main.31762512.css.map",
+    "main.17f45ba0.js.map": "/form-overmind/static/js/main.17f45ba0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fe4f3e2.css",
-    "static/js/main.9514b491.js"
+    "static/css/main.31762512.css",
+    "static/js/main.17f45ba0.js"
   ]
 }
