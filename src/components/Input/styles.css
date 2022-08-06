@@ -11,7 +11,7 @@
   color: black;
   border-radius: 8px;
   height: 28px;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   outline: none;
   transition: all 0.2s;
@@ -19,4 +19,8 @@
 
 .inputStyle:focus {
   outline: solid 1px #1a1b30;
+}
+
+.inputStyle::placeholder {
+  color: #afaeae;
 }

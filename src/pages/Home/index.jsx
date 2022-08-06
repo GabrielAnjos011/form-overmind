@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast } from 'react-toastify';
+import { mask } from 'remask'
 import Input from "../../components/Input";
 import "./styles.css";
 
@@ -73,13 +74,12 @@ function Home() {
           onChange={setFormValues}
         />
         <Input
-          title="Número de telefone precisa ser no formato (99) 9999-9999"
+          title="Número de telefone precisa ser no formato (99) 99999-9999"
           type="tel"
           label="Telefone"
           name="telephone"
-          placeholder="(99) 9999-9999"
-          pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
-          value={formValues.telephone}
+          placeholder="(99) 99999-9999"
+          value={mask(formValues.telephone, ['(99) 99999-9999'])}
           onChange={setFormValues}
         />
         <Input
