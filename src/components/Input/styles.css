@@ -1,8 +1,8 @@
 .containerInput {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-bottom: 30px;
+  /* gap: 10px; */
+  padding-bottom: 15px;
 }
 
 .inputStyle {
@@ -10,11 +10,12 @@
   background-color: #dbdada;
   color: black;
   border-radius: 8px;
-  height: 28px;
+  height: 25px;
   font-size: 20px;
   padding: 10px;
   outline: none;
   transition: all 0.2s;
+  margin-top: 8px;
 }
 
 .inputStyle:focus {
@@ -23,4 +24,11 @@
 
 .inputStyle::placeholder {
   color: #afaeae;
+}
+
+@media (min-width: 1400px) {
+  .containerInput {
+    gap: 10px;
+    padding-bottom: 30px;
+  }
 }

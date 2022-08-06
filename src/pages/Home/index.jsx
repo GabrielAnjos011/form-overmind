@@ -53,8 +53,8 @@ function Home() {
         }}
         className="form"
       >
-        <h2 className="form_title">Login</h2>
-        <p className="section">Dados</p>
+        <h2 className="form_title">Cadastra-se</h2>
+        <p className="section">Preencha com os seus dados</p>
         <Input
           type="text"
           title="Insira o nome completo"
